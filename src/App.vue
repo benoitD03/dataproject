@@ -10,7 +10,7 @@
 
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-      <v-app-bar-title>Répartition des cliens SNCF</v-app-bar-title>
+      <v-app-bar-title>Clients SNCF</v-app-bar-title>
 
       <v-spacer></v-spacer>
 
@@ -33,19 +33,19 @@
     >
       <v-container style="height: 200px"></v-container>
     </v-sheet>
-
+    <h1 class="d-flex justify-center my-5">Répartions des clients SNCF par tranche d'âge</h1>
     <v-main>
       <v-card class="mx-5">
         <v-card-text>
-          <Search/>
-        </v-card-text> 
-      </v-card> 
+          <Search />
+        </v-card-text>
+      </v-card>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Search from './components/Search';
+import Search from "./components/Search";
 
 export default {
   name: "App",
@@ -59,3 +59,4 @@ export default {
   }),
 };
 </script>
+

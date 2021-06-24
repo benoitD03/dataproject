@@ -5,11 +5,11 @@
         <v-select
           v-model="cityFilter"
           :items="cityStationName"
-          label="Ville"
+          label="Ville et Gare"
           required
         ></v-select>
       </v-col>
-      <v-col class="d-flex justify-center" sm="6">
+      <v-col sm="6">
         <v-btn id="button" class="my-5" color="primary" @click="filterItems"
           >Rechercher</v-btn
         >
@@ -17,7 +17,8 @@
     </v-row>
     <v-row>
       <v-col>
-        <Results :itemsData="filteredItems" />
+        <h2 v-if="filteredItems == !filteredItems || filteredItems == items">Choisissez une gare</h2>
+        <Results v-else :itemsData="filteredItems" />
       </v-col>
     </v-row>
   </v-container>
@@ -66,4 +67,7 @@ export default {
 </script>
 
 <style scoped>
+  h2 {
+    color: #F4511E;
+  }
 </style>
